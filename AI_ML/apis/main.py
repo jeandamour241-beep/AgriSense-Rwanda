@@ -40,6 +40,13 @@ fertilizer_recommendation_service = (
 data_explorer_service = DataExplorerService()
 
 
+@app.get("/")
+def main():
+    return {
+        "status": "running",
+        "message": "main"
+    }
+
 @app.get("/health")
 def health():
     return {
