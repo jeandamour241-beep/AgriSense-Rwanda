@@ -1,0 +1,29 @@
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Machine learning model artifacts
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.keras
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# Node.js / Next.js
+node_modules/
+.next/
+dist/
+coverage/
+
+# Secrets
+.env
+.env.*
+!.env.example
+!.env.sample
