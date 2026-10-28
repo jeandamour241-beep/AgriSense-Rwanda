@@ -13,10 +13,10 @@ export class PestDiseaseController {
     private readonly pestDiseaseService: PestDiseaseService,
   ) {}
 
-  @Post()
-  async recommend(
-    @Body() dto: PestDiseaseDto,
-  ) {
-    return this.pestDiseaseService.recommend(dto);
-  }
+  // @Post()
+  // async recommend(
+  //   @Body() dto: PestDiseaseDto,
+  // ) {
+  //   return this.pestDiseaseService.recommend(dto);
+  // }
 }

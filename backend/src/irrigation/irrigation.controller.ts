@@ -8,8 +8,8 @@ export class IrrigationController {
     private readonly irrigationService: IrrigationService,
   ) {}
 
-  @Post()
-  async recommend(@Body() dto: IrrigationDto) {
-    return this.irrigationService.recommend(dto);
-  }
+  // @Post()
+  // async recommend(@Body() dto: IrrigationDto) {
+  //   return this.irrigationService.recommend(dto);
+  // }
 }

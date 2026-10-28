@@ -8,8 +8,8 @@ export class CropRecommendationController {
     private readonly cropRecommendationService: CropRecommendationService,
   ) {}
 
-  @Post()
-  async recommend(@Body() dto: CropRecommendationDto) {
-    return this.cropRecommendationService.recommend(dto);
-  }
+  // @Post()
+  // async recommend(@Body() dto: CropRecommendationDto) {
+  //   return this.cropRecommendationService.recommend(dto);
+  // }
 }

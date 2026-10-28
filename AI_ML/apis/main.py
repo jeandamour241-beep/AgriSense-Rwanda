@@ -3,13 +3,13 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 
-from src.crop_recommendation.service.crop_recommendation_service import (
-    CropRecommendationService,
-)
-from src.irrigation.services.irrigation_recommendation_service import (
-    IrrigationRecommendationService,
-)
-from src.pest_disease.services.pest_disease_service import PestDiseaseService
+# from src.crop_recommendation.service.crop_recommendation_service import (
+#     CropRecommendationService,
+# )
+# from src.irrigation.services.irrigation_recommendation_service import (
+#     IrrigationRecommendationService,
+# )
+# from src.pest_disease.services.pest_disease_service import PestDiseaseService
 from src.fertilizer.services.fertilizer_recommendation_service import (
     FertilizerRecommendationService,
 )
@@ -31,9 +31,9 @@ class CropRecommendationRequest(BaseModel):
     s4q6: Optional[str] = None
 
 
-recommendation_service = CropRecommendationService()
-irrigation_service = IrrigationRecommendationService()
-pest_disease_service = PestDiseaseService()
+# recommendation_service = CropRecommendationService()
+# irrigation_service = IrrigationRecommendationService()
+# pest_disease_service = PestDiseaseService()
 fertilizer_recommendation_service = (
     FertilizerRecommendationService()
 )
@@ -56,78 +56,78 @@ def health():
     }
 
 
-@app.post("/crop-recommendation")
-def crop_recommendation(request: CropRecommendationRequest):
-    try:
-        user_input = request.model_dump(exclude_none=True)
+# @app.post("/crop-recommendation")
+# def crop_recommendation(request: CropRecommendationRequest):
+#     try:
+#         user_input = request.model_dump(exclude_none=True)
 
-        result = recommendation_service.recommend(
-            user_input=user_input,
-            top_n=3,
-        )
+#         result = recommendation_service.recommend(
+#             user_input=user_input,
+#             top_n=3,
+#         )
 
-        return result
-    except ValueError as error:
-        raise HTTPException(status_code=422, detail=str(error)) from error
-    except Exception as error:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Crop recommendation failed: {error}",
-        ) from error
-
-
-@app.post("/irrigation/recommend")
-def irrigation_recommendation(data: dict):
-    """
-    Generate irrigation recommendation
-    using the trained irrigation model
-    and historical irrigation advice.
-    """
-
-    try:
-        result = irrigation_service.predict(data)
-
-        return {
-            "success": True,
-            "data": result,
-        }
-
-    except ValueError as error:
-        return {
-            "success": False,
-            "error": str(error),
-        }
-
-    except Exception as error:
-        return {
-            "success": False,
-            "error": "Internal server error",
-            "details": str(error),
-        }
+#         return result
+#     except ValueError as error:
+#         raise HTTPException(status_code=422, detail=str(error)) from error
+#     except Exception as error:
+#         raise HTTPException(
+#             status_code=500,
+#             detail=f"Crop recommendation failed: {error}",
+#         ) from error
 
 
-@app.post("/pest-disease/recommend")
-def pest_disease_recommendation(data: dict):
-    try:
-        result = pest_disease_service.predict(data)
+# @app.post("/irrigation/recommend")
+# def irrigation_recommendation(data: dict):
+#     """
+#     Generate irrigation recommendation
+#     using the trained irrigation model
+#     and historical irrigation advice.
+#     """
 
-        return {
-            "success": True,
-            "data": result
-        }
+#     try:
+#         result = irrigation_service.predict(data)
 
-    except ValueError as error:
-        return {
-            "success": False,
-            "error": str(error)
-        }
+#         return {
+#             "success": True,
+#             "data": result,
+#         }
 
-    except Exception as error:
-        return {
-            "success": False,
-            "error": "Internal server error",
-            "details": str(error)
-        }
+#     except ValueError as error:
+#         return {
+#             "success": False,
+#             "error": str(error),
+#         }
+
+#     except Exception as error:
+#         return {
+#             "success": False,
+#             "error": "Internal server error",
+#             "details": str(error),
+#         }
+
+
+# @app.post("/pest-disease/recommend")
+# def pest_disease_recommendation(data: dict):
+#     try:
+#         result = pest_disease_service.predict(data)
+
+#         return {
+#             "success": True,
+#             "data": result
+#         }
+
+#     except ValueError as error:
+#         return {
+#             "success": False,
+#             "error": str(error)
+#         }
+
+#     except Exception as error:
+#         return {
+#             "success": False,
+#             "error": "Internal server error",
+#             "details": str(error)
+#         }
 
 
 @app.post("/fertilizer/recommend")
