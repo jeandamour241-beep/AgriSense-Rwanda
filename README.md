@@ -127,7 +127,7 @@ _____Source of data used
 
     the cleaned merged dataset is stored in AI_ML/data/all_data/all_seasons_cleaned_merged.csv
 
-2. is geojson we used to design map of Rwanda in agriculture risk map from geoboundaries. we downloaded it on this link https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/RWA/ADM2/geoBoundaries-RWA-ADM2.geojson?utm_source=chatgpt.com. it stored in backend/src/agriculture-risk-map/data/rwanda_districts2.geojson
+2. is geojson we used to design map of Rwanda in agriculture risk map from geoboundaries. we downloaded it on this link https://www.geoboundaries.org/countryDownloads.html it stored in backend/src/agriculture-risk-map/data/rwanda_districts2.geojson
 
 ______Methodology
 
@@ -149,13 +149,21 @@ The development process includes:
 
 The platform combines machine-learning functionality with data analysis and visualization. Not every module should be interpreted as an independently trained machine-learning model.
 
-______Technology Stack
+______Technology Stack and Libraries:
 
-Frontend: Next.js
-Backend: NestJS
-Machine Learning and Data Analysis: Python
-Data Processing: Pandas, numpy and other Python libraries used in the project
-Visualization: Dashboard components and map visualizations
+1. Python: Data processing and machine learning development.
+
+2. Pandas and NumPy: Agricultural data cleaning, transformation, and analysis.
+
+3. Scikit-learn: Development and evaluation of machine learning models.
+
+4. FastAPI: Development of Python-based API services.
+
+5. Hugging Face: Storage and distribution of trained machine learning models.
+
+6. Next.js and React: Development of the web application interface.
+
+7. NestJS: Backend API development.
 
 ______System Architecture
 
@@ -230,3 +238,21 @@ The expected impact is to improve access to agricultural information, make surve
 
 The platform is a decision-support tool, not a replacement for professional agricultural advice or field verification.
 
+______Responsible Data Use
+
+This project is intended for agricultural analysis and decision support.
+
+Users should consider the limitations of survey-based data and machine-learning predictions when interpreting results. Dataset redistribution, access, and attribution must follow the applicable data-provider requirements.
+
+______Project Status
+
+Rwanda AgriSystem has been developed as a prototype for agricultural data exploration and decision support.
+
+The project includes the modules described above. Its readiness for wider deployment depends on testing, data-access permissions, model validation, and operational requirements.
+
+Project: AgriSense Rwanda
+Competition: NISR Hackathon 2026
+Repository: [INSERT PUBLIC GITHUB REPOSITORY URL]
+Live Demo: [INSERT PUBLIC DEPLOYMENT URL]
+cleaned_merged_dataset: [INSERT PUBLIC DEPLOYMENT URL]
+Geojson_data: [INSERT PUBLIC DEPLOYMENT URL]

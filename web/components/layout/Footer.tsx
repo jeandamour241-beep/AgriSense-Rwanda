@@ -1,6 +1,10 @@
+"use client";
+
 import { AlertTriangleIcon } from "@/components/ui/Icons";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
 export function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,9 +19,7 @@ export function Footer() {
               >
                 AgriSense Rwanda
               </h2>
-              <p className="mt-2 max-w-xs text-sm leading-6 text-amber-950/80">
-                Agricultural data insights and decision support for Rwanda.
-              </p>
+              <p className="mt-2 max-w-xs text-sm leading-6 text-amber-950/80">{t("Agricultural data insights and decision support for Rwanda.")}</p>
             </section>
 
             <section aria-labelledby="footer-data-title">
@@ -26,28 +28,12 @@ export function Footer() {
                 className="flex items-center gap-2 text-sm font-bold text-amber-950"
               >
                 <AlertTriangleIcon size={17} className="shrink-0 text-amber-700" />
-                <span>Data Source and Limitations</span>
+                <span>{t("Data Source and Limitations")}</span>
               </h2>
               <div className="mt-2 space-y-2.5 text-[13px] leading-5 text-amber-950/85">
-                <p>
-                  AgriSense Rwanda uses agricultural survey data from the National
-                  Institute of Statistics of Rwanda (NISR), based on the 2025
-                  dataset available to this project. The observations represent
-                  historical survey information and should not be interpreted as
-                  real-time agricultural conditions.
-                </p>
-                <p>
-                  Machine-learning predictions and recommendations are estimates
-                  generated from available data and model outputs. They may not
-                  reflect current field conditions and should be verified against
-                  local observations and advice from qualified agricultural
-                  officers before making important farming decisions.
-                </p>
-                <p>
-                  Data availability, sample size, and model performance may vary
-                  by district, season, and agricultural indicator. Results should
-                  be interpreted with these limitations in mind.
-                </p>
+                <p>{t("AgriSense Rwanda uses agricultural survey data from the National Institute of Statistics of Rwanda (NISR), based on the 2025 dataset available to this project. The observations represent historical survey information and should not be interpreted as real-time agricultural conditions.")}</p>
+                <p>{t("Machine-learning predictions and recommendations are estimates generated from available data and model outputs. They may not reflect current field conditions and should be verified against local observations and advice from qualified agricultural officers before making important farming decisions.")}</p>
+                <p>{t("Data availability, sample size, and model performance may vary by district, season, and agricultural indicator. Results should be interpreted with these limitations in mind.")}</p>
               </div>
             </section>
           </div>
