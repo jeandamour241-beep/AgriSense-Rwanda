@@ -127,7 +127,7 @@ _____Source of data used
 
     the cleaned merged dataset is stored in AI_ML/data/all_data/all_seasons_cleaned_merged.csv
 
-2. is geojson we used to design map of Rwanda in agriculture risk map from geoboundaries. we downloaded it on this link https://www.geoboundaries.org/countryDownloads.html it stored in backend/src/agriculture-risk-map/data/rwanda_districts2.geojson
+2. is geojson we used to design map of Rwanda in agriculture risk map from geoboundaries. we downloaded it on this link [https://www.geoboundaries.org/countryDownloads.html] it stored in backend/src/agriculture-risk-map/data/rwanda_districts2.geojson
 
 ______Methodology
 
@@ -250,9 +250,12 @@ Rwanda AgriSystem has been developed as a prototype for agricultural data explor
 
 The project includes the modules described above. Its readiness for wider deployment depends on testing, data-access permissions, model validation, and operational requirements.
 
+______Other documment we have used:
+NISR agriculture survey 2025 plot questionnaire to understand the dataset features
+
 Project: AgriSense Rwanda
 Competition: NISR Hackathon 2026
-Repository: [INSERT PUBLIC GITHUB REPOSITORY URL]
-Live Demo: [INSERT PUBLIC DEPLOYMENT URL]
-cleaned_merged_dataset: [INSERT PUBLIC DEPLOYMENT URL]
-Geojson_data: [INSERT PUBLIC DEPLOYMENT URL]
+Repository: [https://github.com/jeandamour241-beep/AgriSense-Rwanda]
+Live Demo: [https://github.com/jeandamour241-beep/AgriSense-Rwanda/blob/main/demo/AgriSenseDemo.webm]
+cleaned_merged_dataset: [https://github.com/jeandamour241-beep/AgriSense-Rwanda/blob/main/AI_ML/data/all_data/all_seasons_cleaned_merged.csv]
+Geojson_data: [https://github.com/jeandamour241-beep/AgriSense-Rwanda/blob/main/backend/src/agriculture-risk-map/data/rwanda_districts2.geojson]
