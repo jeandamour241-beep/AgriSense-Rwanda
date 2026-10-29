@@ -39,9 +39,21 @@ export const RWANDA_DISTRICTS = [
 export type RwandaDistrict = (typeof RWANDA_DISTRICTS)[number];
 
 export const AGRICULTURE_SEASONS = [
-  { value: "Season A", labelEn: "Season A (Sept - Feb)", labelRw: "Igihembwe cya A (Nzeli - Gashyantare)" },
-  { value: "Season B", labelEn: "Season B (March - June)", labelRw: "Igihembwe cya B (Werurwe - Kamena)" },
-  { value: "Season C", labelEn: "Season C (Marshlands / July - Sept)", labelRw: "Igihembwe cya C (Imyobo / Nyakanga - Nzeli)" },
+  {
+    value: "Season A",
+    labelEn: "Season A (Sept - Feb)",
+    labelRw: "Igihembwe cya A (Nzeli - Gashyantare)",
+  },
+  {
+    value: "Season B",
+    labelEn: "Season B (March - June)",
+    labelRw: "Igihembwe cya B (Werurwe - Kamena)",
+  },
+  {
+    value: "Season C",
+    labelEn: "Season C (Marshlands / July - Sept)",
+    labelRw: "Igihembwe cya C (Imyobo / Nyakanga - Nzeli)",
+  },
 ] as const;
 
 export const IRRIGATION_OPTIONS = [

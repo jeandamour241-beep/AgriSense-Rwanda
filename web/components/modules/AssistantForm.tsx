@@ -316,7 +316,7 @@ export function AssistantForm({ module }: { module: ModuleKind }) {
     setLoading(true);
     try {
       const baseUrl = (
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000"
       ).replace(/\/$/, "");
       const response = await fetch(`${baseUrl}${config.endpoint}`, {
         method: "POST",

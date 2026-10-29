@@ -1,0 +1,39 @@
+### requirements ###
+
+1. Node.js and npm
+2. Python
+3. Git
+
+and install pip open cmd and past: python -m ensurepip --default-pip
+
+#################################################
+
+for AI_ML(Python):
+
+1. cd AI_ML
+2. create venv: On Windows PowerShell:
+    python -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+
+3. install the listed dependencies:
+    pip install -r requirements.txt
+
+4. running:  python -m uvicorn apis.main:app --reload --port 8000  
+
+###############################################
+
+for backend:
+
+1. cd backend
+2. install dependencies: npm install
+3. running: npm run start:dev
+
+###############################################
+
+for web(frontend):
+
+1. cd web
+2. create .env.local file and put in: NEXT_PUBLIC_API_URL=http://localhost:4000 like this
+3. install dependencies: npm install
+4. running: npm run dev
+

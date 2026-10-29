@@ -10,18 +10,7 @@ import { IrrigationResultView } from "@/components/irrigation/IrrigationResultVi
  *
  * This is the ONLY irrigation page and route in the application.
  * No second page or route was created.
- *
- * Structure:
- *   Existing Irrigation Page
- *           │
- *           ├── Existing layout / AppShell (navbar + sidebar)
- *           │
- *           ├── Irrigation Form (10 model input fields)
- *           │
- *           ├── Submit button with bilingual loading state
- *           │
- *           └── Recommendation results (rendered below the form upon submit)
- */
+ **/
 export default function IrrigationPage() {
   const { result, clearIrrigation } = useIrrigation();
   const resultRef = useRef<HTMLDivElement>(null);

@@ -1,7 +1,7 @@
 import { IrrigationRequest, IrrigationResponseData } from "@/types/irrigation";
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export class IrrigationServiceError extends Error {
   constructor(
